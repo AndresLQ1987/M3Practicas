@@ -5,10 +5,10 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class MainAposta {
-	
+
 	public static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 	public static boolean salir = false;
-	
+
 	public static void main(String[] args) {
 		Porra porra = new Porra();
 		while (!salir) {
@@ -27,7 +27,7 @@ public class MainAposta {
 		System.out.println("2.- Terminar Porra\n");
 		System.out.print("Opcion: ");
 	}
-	
+
 	public static int recogerOpcion() {
 		int seleccion = 0;
 		try {
@@ -43,7 +43,7 @@ public class MainAposta {
 		}
 		return seleccion;
 	}
-	
+
 	public static void ejecutarSeleccion(int sel, Porra p) {
 		switch (sel) {
 		case 1:
@@ -57,7 +57,7 @@ public class MainAposta {
 			break;
 		}
 	}
-	
+
 	public static void addAposta(Porra p) {
 		try {
 			Aposta a = recogerAposta();
@@ -73,7 +73,7 @@ public class MainAposta {
 			System.out.println("Error al introducir, intentalo de nuevo.");
 		}
 	}
-	
+
 	public static Aposta recogerAposta() throws Exception, NegativeNumException {
 		try {
 			System.out.print("Intrododuce dni: ");
@@ -88,10 +88,10 @@ public class MainAposta {
 			throw new Exception();
 		}
 	}
-	
-	public static int recogerGoles(String frase) throws Exception{
+
+	public static int recogerGoles(String frase) throws Exception {
 		try {
-			System.out.print("Introduce numero de goles"+ frase +": ");
+			System.out.print("Introduce numero de goles" + frase + ": ");
 			int golesLocales = Integer.parseInt(reader.readLine());
 			return golesLocales;
 		} catch (Exception e) {
@@ -99,7 +99,7 @@ public class MainAposta {
 			throw new Exception();
 		}
 	}
-	
+
 	private static Aposta ApuestaGanadora() {
 		Random r = new Random();
 		int golesLocal = r.nextInt(11);

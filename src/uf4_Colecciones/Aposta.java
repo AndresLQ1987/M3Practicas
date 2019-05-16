@@ -51,4 +51,16 @@ public class Aposta {
 		}
 		return misma;
 	}
+
+	/**
+	 * El metodo equals sobre escrito. pero no entrara ya que en ningun momento se
+	 * usa en el main. ya que no queria comparar que la persona fuese igual si no
+	 * solo los valores de su apuesta. Y si estos ya estaban en uso no agregar la
+	 * apuesta.
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
 }

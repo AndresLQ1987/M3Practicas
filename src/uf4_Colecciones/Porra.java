@@ -5,21 +5,21 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 public class Porra {
-	
+
 	/**
-	 * Con sustituir los lugares que se usaba un ArrayList por un HashSet
-	 * el programa sige funcionando correctamente.
+	 * Con sustituir los lugares que se usaba un ArrayList por un HashSet el
+	 * programa sige funcionando correctamente.
 	 */
-	//private ArrayList<Aposta> listaApuestas;
+	// private ArrayList<Aposta> listaApuestas;
 	private HashSet<Aposta> listaApuestas;
-	
+
 	public Porra() {
 		listaApuestas = new HashSet<>();
 	}
 
-	/*public ArrayList<Aposta> getListaApuestas() {
-		return listaApuestas;
-	}*/
+	/*
+	 * public ArrayList<Aposta> getListaApuestas() { return listaApuestas; }
+	 */
 	public HashSet<Aposta> getListaApuestas() {
 		return listaApuestas;
 	}
