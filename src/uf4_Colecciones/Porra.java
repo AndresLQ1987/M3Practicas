@@ -1,17 +1,26 @@
 package uf4_Colecciones;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 
 public class Porra {
-
-	private ArrayList<Aposta> listaApuestas;
-
+	
+	/**
+	 * Con sustituir los lugares que se usaba un ArrayList por un HashSet
+	 * el programa sige funcionando correctamente.
+	 */
+	//private ArrayList<Aposta> listaApuestas;
+	private HashSet<Aposta> listaApuestas;
+	
 	public Porra() {
-		listaApuestas = new ArrayList<>();
+		listaApuestas = new HashSet<>();
 	}
 
-	public ArrayList<Aposta> getListaApuestas() {
+	/*public ArrayList<Aposta> getListaApuestas() {
+		return listaApuestas;
+	}*/
+	public HashSet<Aposta> getListaApuestas() {
 		return listaApuestas;
 	}
 
