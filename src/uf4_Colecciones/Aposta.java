@@ -1,15 +1,15 @@
 package uf4_Colecciones;
 
 public class Aposta {
-	
+
 	private String dni;
 	private int golsLocals;
 	private int golsVisitants;
-	
+
 	public Aposta(String dni, int golsLocals, int golsVisitants) throws NegativeNumException {
-			setGolsLocals(golsLocals);
-			setGolsVisitants(golsVisitants);
-			setDni(dni);
+		setGolsLocals(golsLocals);
+		setGolsVisitants(golsVisitants);
+		setDni(dni);
 	}
 
 	public String getDni() {
@@ -36,11 +36,19 @@ public class Aposta {
 		return golsVisitants;
 	}
 
-	public void setGolsVisitants(int golsVisitants) throws NegativeNumException{
+	public void setGolsVisitants(int golsVisitants) throws NegativeNumException {
 		if (golsLocals >= 0) {
 			this.golsVisitants = golsVisitants;
 		} else {
 			throw new NegativeNumException("Error, goles no pueden ser negativos");
 		}
+	}
+
+	public boolean mismaAposta(Aposta a) {
+		boolean misma = false;
+		if (golsLocals == a.getGolsLocals() && golsVisitants == a.getGolsVisitants()) {
+			misma = true;
+		}
+		return misma;
 	}
 }
