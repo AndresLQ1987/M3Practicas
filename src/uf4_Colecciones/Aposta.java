@@ -60,7 +60,13 @@ public class Aposta {
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
 		return super.equals(obj);
 	}
+
+	@Override
+	public int hashCode() {
+		return (String.valueOf(golsLocals) + " - " + String.valueOf(golsVisitants)).hashCode();
+	}
+	
+	
 }
