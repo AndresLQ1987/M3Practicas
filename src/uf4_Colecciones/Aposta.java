@@ -60,7 +60,17 @@ public class Aposta {
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj);
+		Aposta temp = null;
+		if (obj.getClass() == Aposta.class) {
+			temp = (Aposta) obj;
+			if ((temp.getGolsLocals() == this.golsLocals) && (temp.getGolsVisitants() == this.golsVisitants)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
 	}
 
 	@Override

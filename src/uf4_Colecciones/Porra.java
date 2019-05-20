@@ -24,16 +24,19 @@ public class Porra {
 		return listaApuestas;
 	}
 
-	public boolean addApuesta(Aposta a) {
+	/*public boolean addApuesta(Aposta a) {
 		boolean add = false;
 		if (!apuestaRepetida(a)) {
 			listaApuestas.add(a);
 			add = true;
 		}
 		return add;
+	}*/
+	public boolean addApuesta(Aposta a) {
+		return listaApuestas.add(a);
 	}
 
-	private boolean apuestaRepetida(Aposta apuesta) {
+	/*private boolean apuestaRepetida(Aposta apuesta) {
 		boolean repetida = false;
 		Iterator<Aposta> it = listaApuestas.iterator();
 		while (it.hasNext()) {
@@ -43,7 +46,7 @@ public class Porra {
 			}
 		}
 		return repetida;
-	}
+	}*/
 
 	public void mostrarGanador(Aposta resul) {
 		Aposta ganador = null;
