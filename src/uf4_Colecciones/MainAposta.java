@@ -51,6 +51,10 @@ public class MainAposta {
 			break;
 		case 2:
 			salir = true;
+		case 3:
+			for (Aposta a : p.getListaApuestas()) {
+				System.out.println(a.hashCode());
+			}
 			break;
 		default:
 			System.out.println("Error de seleccion, Introduce una de las opciones mostradas.");
